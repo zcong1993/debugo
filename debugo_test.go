@@ -55,6 +55,16 @@ func TestDebug_Debugf3(t *testing.T) {
 
 }
 
+func TestDebug_Debugf4(t *testing.T) {
+	os.Setenv(debugEnvName, "nodebug")
+	defer os.Unsetenv(debugEnvName)
+
+	debug := newTestDebug("debug")
+	out := log(debug, "hello")
+
+	assert.Equal(t, "", out)
+}
+
 func TestDebug_SetColorFunc(t *testing.T) {
 	os.Setenv(debugEnvName, "debug")
 	defer os.Unsetenv(debugEnvName)
