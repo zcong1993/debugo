@@ -51,10 +51,10 @@ func parseEnv() []string {
 	for _, v := range tmpArr {
 		vv := strings.TrimSpace(v)
 		if vv == ALL {
-			return []string{"*"}
+			return []string{ALL}
 		}
 		if vv == FALSE {
-			return []string{}
+			return []string{FALSE}
 		}
 		res = append(res, vv)
 	}
