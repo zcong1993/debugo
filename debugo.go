@@ -34,10 +34,6 @@ const (
 var cachedEnv []string
 var isInit = false
 
-func emptyColorFunc(in string) string {
-	return ""
-}
-
 func genRgbColorFunc(r, g, b uint8) ColorFunc {
 	return func(s string) string {
 		return color.FgString(s, r, g, b)
@@ -85,7 +81,7 @@ func NewDebug(name string) *Debug {
 
 	n := strings.TrimSpace(name)
 	show := matchName(n, cachedEnv)
-	colorFunc := emptyColorFunc
+	var colorFunc ColorFunc
 	if show {
 		r, g, b := genColor([]byte(n))
 		colorFunc = genRgbColorFunc(r, g, b)
