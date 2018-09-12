@@ -19,6 +19,7 @@ type Debug struct {
 	colorFunc ColorFunc
 	show      bool
 	showTime  bool
+	noCache   bool
 }
 
 const (
@@ -97,6 +98,12 @@ func NewDebug(name string) *Debug {
 		colorFunc: colorFunc,
 		showTime:  true,
 	}
+}
+
+func newTestDebug(name string) *Debug {
+	// always disable cache
+	isInit = false
+	return NewDebug(name)
 }
 
 // SetOutput set an io.Writer as output, default is os.Stdout

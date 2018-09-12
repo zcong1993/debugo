@@ -1,4 +1,4 @@
-# debugo [![Go Report Card](https://goreportcard.com/badge/github.com/zcong1993/debugo)](https://goreportcard.com/report/github.com/zcong1993/debugo)
+# debugo [![Go Report Card](https://goreportcard.com/badge/github.com/zcong1993/debugo)](https://goreportcard.com/report/github.com/zcong1993/debugo) [![CircleCI branch](https://img.shields.io/circleci/project/github/zcong1993/debugo/master.svg)](https://circleci.com/gh/zcong1993/debugo/tree/master) [![codecov](https://codecov.io/gh/zcong1993/debugo/branch/master/graph/badge.svg)](https://codecov.io/gh/zcong1993/debugo)
 
 > debug for golang
 
