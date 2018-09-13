@@ -3,7 +3,7 @@ package sub
 import "github.com/zcong1993/debugo"
 
 var debugSub = debugo.NewDebug("sub")
-var debugSub2 = debugo.NewDebug("sub-debugger")
+var debugSub2 = debugo.NewDebug("sub-sub")
 
 // Run is runner for example
 func Run() {

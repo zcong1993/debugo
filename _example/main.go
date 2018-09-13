@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/zcong1993/debugo"
-	"github.com/zcong1993/debugo/example/sub"
+	"github.com/zcong1993/debugo/_example/sub"
 	"time"
 )
 

@@ -84,5 +84,5 @@ func TestDebug_DisableTime(t *testing.T) {
 	debug.DisableTime()
 	out := log(debug, "hello")
 
-	assert.Equal(t, out, "\x1b[38;5;66mdebug\x1b[0;00m hello\n")
+	assert.Equal(t, out, "\x1b[38;5;24mdebug\x1b[0;00m hello\n")
 }
