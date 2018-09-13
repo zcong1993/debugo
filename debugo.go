@@ -65,7 +65,7 @@ func matchName(name string, env []string) bool {
 		if v == FALSE {
 			return false
 		}
-		if name == v {
+		if Match(v, name) {
 			return true
 		}
 	}

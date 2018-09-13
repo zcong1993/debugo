@@ -18,13 +18,13 @@ func log(debug *Debug, format string, opt ...interface{}) string {
 }
 
 func TestDebug_Debugf(t *testing.T) {
-	os.Setenv(debugEnvName, "debug")
+	os.Setenv(debugEnvName, "a")
 	defer os.Unsetenv(debugEnvName)
-	debug := newTestDebug("debug")
+	debug := newTestDebug("a")
 	out := log(debug, "hello")
 
 	assert.True(t, strings.Contains(out, "hello"))
-	assert.True(t, strings.Contains(out, "debug"))
+	assert.True(t, strings.Contains(out, "a"))
 }
 
 func TestDebug_Debugf2(t *testing.T) {
@@ -84,5 +84,5 @@ func TestDebug_DisableTime(t *testing.T) {
 	debug.DisableTime()
 	out := log(debug, "hello")
 
-	assert.Equal(t, out, "\x1b[38;5;59mdebug\x1b[0;00m hello\n")
+	assert.Equal(t, out, "\x1b[38;5;66mdebug\x1b[0;00m hello\n")
 }

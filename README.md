@@ -21,6 +21,7 @@ import (
 
 var debugMain = debugo.NewDebug("main")
 
+// DEBUG=main go run main.go
 func main() {
 	debugMain.Debugf("debug main")
 }
