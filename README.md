@@ -10,7 +10,7 @@ $ go get -v github.com/zcong1993/debugo
 
 ## Usage
 
-see [example](./example)
+see [example](./_example)
 
 ```go
 package main
